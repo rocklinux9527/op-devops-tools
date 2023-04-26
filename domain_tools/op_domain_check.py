@@ -98,10 +98,7 @@ async def check_domain_code(url):
                                                                                                   status_code=status_code)
             data = {"msgtype": "text", "text": {"content": "{message}".format(message=message)}}
             result = sendDingDingHook(data)
-            if result.get("errcode") == 0 and result.get("errmsg") == "ok":
-                print(f"钉钉消息发送成功：{result}")
-            else:
-                print(f"钉钉消息发送失败：{result}")
+            print(result)
     except requests.exceptions.RequestException as e:
         print(f"Error occurred while checking domain {url}: {str(e)}")
 
