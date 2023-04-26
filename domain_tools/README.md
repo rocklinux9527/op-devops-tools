@@ -28,3 +28,11 @@ urllib3==1.26.15
 zipp==3.15.0
 ```
 
+***4.测试验证***
+```
+检查域名:https://www.baidu.com/,状态码:200, 域名可正常访问
+检查域名:https://www.taobao.com/,状态码:200, 域名可正常访问
+检查域名:https://www.sina.com.cn/,状态码:200, 域名可正常访问
+{'code': 0, 'status': True, 'message': 'dingding web-hook send success'}
+检查域名:https://home.51cto.com/,状态码:200, 域名可正常访问
+```
