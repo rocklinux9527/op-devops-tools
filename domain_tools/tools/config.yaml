@@ -1,4 +1,3 @@
-dingTalk:
-  ding_hook_url: "https://oapi.dingtalk.com"
-  ding_hook_secret: ""
-  ding_hook_token: ""
+dingding:
+  webhook_url: ""
+  secret: "" 
