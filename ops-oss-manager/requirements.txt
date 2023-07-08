@@ -1,0 +1,16 @@
+aliyun-python-sdk-core==2.13.36
+aliyun-python-sdk-kms==2.16.1
+certifi==2023.5.7
+cffi==1.15.1
+charset-normalizer==3.1.0
+crcmod==1.7
+cryptography==41.0.1
+idna==3.4
+jmespath==0.10.0
+oss2==2.18.0
+pycparser==2.21
+pycryptodome==3.18.0
+PyYAML==6.0
+requests==2.31.0
+six==1.16.0
+urllib3==2.0.3

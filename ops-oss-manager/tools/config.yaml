@@ -1,0 +1,15 @@
+Authentication:
+  ak: ""
+  sk: ""
+  endpoint: "https://oss-cn-hangzhou.aliyuncs.com"
+  bucket_name: ""
+
+AliOss:
+  upload_bucket_dir: "dxxs2/assets/" # bucket上传文件的目录
+  upload_local_dir: "./oos_backup/dxxs2/assets/" #本地文件路径
+  list_file_path: "dxxs2/" #获取oss bucket 目录下的文件
+  download_bucket_dir: "dxxs2/" # 下载bucket 下所有文件 (目前只支持全部根下)
+  download_local_dir: "./oos_backup/" # 本地存放下载的路径 (目录自己会创建)
+  pack_folder_path: "./oos_backup/dxxs2" # 打包tar.gz 目标路径
+  pack_output_path: "./backup_pack"     # 打包tar.gz 输出路径
+  delete_file_path: "dxxs2/assets/" #可以为空 删除bucket 目录(必须指定).
