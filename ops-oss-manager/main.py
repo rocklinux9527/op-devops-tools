@@ -1,3 +1,7 @@
+# 参考文档
+# https://help.aliyun.com/document_detail/88458.html?spm=a2c4g.31965.0.0.5c9e5bb1OUNPYK#t22335.html
+# https://help.aliyun.com/document_detail/88442.html?spm=a2c4g.88458.0.0.50742373g1M49M
+
 import logging
 import os
 import tarfile
@@ -77,7 +81,7 @@ class AliYunOssManager():
 
     def root_directory_list(self):
         # 设置Delimiter参数为正斜线（/）。
-        for obj in oss2.ObjectIterator(self.bucket, delimiter='/'):
+        for obj in oss2.ObjectIterator(self.bucket, prefix =self.download_bucket_dir, delimiter='/'):
             # 通过is_prefix方法判断obj是否为文件夹。
             if obj.is_prefix():  # 文件夹
                 print('directory: ' + obj.key);
@@ -96,9 +100,8 @@ class AliYunOssManager():
         if False == os.path.exists(file_path_prefix):
             os.makedirs(file_path_prefix);
             print("directory don't not make dirs "+  file_path_prefix);
-
-        # 下载OSS文件到本地文件。如果指定的本地文件存在会覆盖，不存在则新建。
-        self.bucket.get_object_to_file(object_name, download_local_save_prefix+local_file);
+            # 下载OSS文件到本地文件。如果指定的本地文件存在会覆盖，不存在则新建。
+            self.bucket.get_object_to_file(object_name, download_local_save_prefix+local_file)
 
     def download_from_oss(self):
         self._download_directory(self.download_bucket_dir,self.download_local_dir)
